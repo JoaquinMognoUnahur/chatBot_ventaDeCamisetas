@@ -33,15 +33,17 @@ function Chatbot() {
 
   // Función para obtener la respuesta del bot
   const getBotResponse = (userMessage) => {
-    switch (userMessage.toLowerCase()) {
-      case 'hola':
-        return 'Hola! Bienvenido a Camisetas Coco! ¿En qué podemos ayudarte?';
-      case 'cual es tu página?':
-        return 'Tengo un bot en telegram, el cual podrás consultarme lo que desees. Te paso mi link: https://t.me/CamisetasCoco_bot';
-      default:
-        return `Bot: Has dicho "${userMessage}"`; // Respuesta por defecto del bot
+    const lowerCaseMessage = userMessage.toLowerCase();
+  
+    if (lowerCaseMessage === 'hola' || lowerCaseMessage === 'buen dia' || lowerCaseMessage === 'holaa') {
+      return 'Hola! Bienvenido a Camisetas Coco! ¿En qué podemos ayudarte?';
+    } else if (lowerCaseMessage === 'cuál es tu página?' || lowerCaseMessage === 'cuál es tu página?' || lowerCaseMessage === 'Cómo es tu página?' || lowerCaseMessage === 'cual es tu pagina?') {
+      return 'Tengo un bot en telegram, el cual podrás consultarme lo que desees. Te paso mi link: https://t.me/CamisetasCoco_bot';
+    } else {
+      return `Bot: Has dicho "${userMessage}"`; // Respuesta por defecto del bot
     }
   };
+  
 
   return (
     <div className="chatbot">
