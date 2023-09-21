@@ -1,3 +1,4 @@
+# ChatBot Joaquin Mogno
 ### Componente `message.jsx`
 
 El archivo `message.jsx` define un componente de React llamado `Message`. Este componente está diseñado para mostrar mensajes en la interfaz de usuario de manera versátil. Puede representar tanto mensajes de usuario como mensajes del bot y aplica estilos diferentes según el tipo de mensaje.
